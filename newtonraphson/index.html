@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Newton-Raphson Method Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <a href="../index.html" style="position: absolute; top: 20px; left: 20px; color: #dfe5ec;">Go Back</a>
+            <div class="info-box">
+                <h3>Important Information</h3>
+                <p>
+                    To use this calculator, please follow these instructions:<br>
+                    1. WRITE THE EQUATION IN TERMS OF Z<br>
+                    2. USE THE * SIGN IN PLACE OF MULTIPLICATION<br>
+                    3. WRITE 3.14 INSTEAD OF PI<br>
+                    4. WRITE THE TRIGONOMETRIC EQUATION AS sin(x), cos(x), etc.<br>
+                    5. WRITE exp(x) FOR e^x<br>
+                    6. WRITE log10(x) FOR LOG BASE 10<br>
+                </p>
+            </div>
+            <div class="input-container">
+                <h2>Newton-Raphson Method Calculator</h2>
+                <label for="equation">Equation:</label>
+                <input type="text" id="equation" placeholder="e.g., z^3 - 4z^2 + 4">
+                <label for="initialGuess">Initial Guess:</label>
+                <input type="text" id="initialGuess" placeholder="Initial guess (e.g., 2)">
+                <label for="decimalplaces">Decimal Place (e.g., 4, 5):</label>
+                <input type="number" id="decimalPlaces" placeholder="Decimal place">
+                <button onclick="newtonRaphson()">Find Root</button>
+            </div>
+            <div class="table-container">
+                <table id="iterationTable">
+                    <thead>
+                        <tr>
+                            <th>Iteration</th>
+                            <th>x</th>
+                            <th>f(x)</th>
+                            <th>f'(x)</th>
+                            <th>Root</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
